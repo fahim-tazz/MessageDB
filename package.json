@@ -4,13 +4,15 @@
   "description": "A message storage system.",
   "scripts": {
     "dev": "concurrently \"tsc --watch\" \"nodemon\"",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^9.1.0",
     "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "faker": "^5.5.3",
     "papaparse": "^5.4.1",

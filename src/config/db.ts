@@ -10,6 +10,9 @@ export async function connectDB(pool: Pool): Promise<void> {
     try {
         await pool.connect()
         console.log("Successfully connected to database!")
+        await pool.query(`
+                DROP TABLE messages, contacts;
+            `)
         const createTablesAndIndicesQuery = `
             CREATE TABLE IF NOT EXISTS contacts (
                 id SERIAL PRIMARY KEY,
